@@ -12,10 +12,17 @@ My changes were done in Xcode 16.0 Beta using Swift 6 with _Complete Concurrency
 
 ## GRDB Branch
 
-There is now a GRDB branch that replicates the functionality of the original app but with GRDB for the datastore
-instead of SwiftData. This is using the `@SharedReader` feature described in Point\*Free episodes about GRDB and found
-in the [GRDBDemo](https://github.com/pointfreeco/swift-sharing/tree/main/Examples/GRDBDemo) app of the 
+There is now a GRDB branch that pretty much replicates the functionality of the original app but with GRDB for the
+datastore instead of SwiftData. Unlike the SwiftData one where there are two tabs showing different ways to handle queries,
+this one only has one way -- the query is managed in the state of the feature, and when it changes the view changes.
+
+This is using the `@SharedReader` feature described in Point\*Free episodes about GRDB and found in the
+[GRDBDemo](https://github.com/pointfreeco/swift-sharing/tree/main/Examples/GRDBDemo) app of the
 [swift-sharing](https://github.com/pointfreeco/swift-sharing) package. Works pretty well!
+
+Once bit to be concerned about is that as you drill down into child views, the state is saved in a stack at the root
+feature. This means that when the database changes, all states will receive an notification via the @SharedReader
+attribute and they will run their associated query even while their view is not being shown.
 
 # Overview
 
