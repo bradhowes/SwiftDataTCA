@@ -10,6 +10,13 @@ This is a fork of the [SwiftDataTCA](https://github.com/SouzaRodrigo61/SwiftData
 [The Composable Architecture v1.11.2 (TCA)](https://github.com/pointfreeco/swift-composable-architecture) library and tools.
 My changes were done in Xcode 16.0 Beta using Swift 6 with _Complete Concurrency Checking_ enabled.
 
+## GRDB Branch
+
+There is now a GRDB branch that replicates the functionality of the original app but with GRDB for the datastore
+instead of SwiftData. This is using the `@SharedReader` feature described in Point\*Free episodes about GRDB and found
+in the [GRDBDemo](https://github.com/pointfreeco/swift-sharing/tree/main/Examples/GRDBDemo) app of the 
+[swift-sharing](https://github.com/pointfreeco/swift-sharing) package. Works pretty well!
+
 # Overview
 
 The code contains two top-level TCA "features" (combination of a reducer and a SwiftUI view):
