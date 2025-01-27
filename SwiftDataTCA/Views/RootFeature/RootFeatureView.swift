@@ -1,7 +1,6 @@
 import ComposableArchitecture
 import SwiftUI
 
-@MainActor
 struct RootFeatureView: View {
   @Bindable var store: StoreOf<RootFeature> = Store(initialState: .init()) { RootFeature() }
 
