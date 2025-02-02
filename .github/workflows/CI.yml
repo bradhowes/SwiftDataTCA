@@ -27,8 +27,9 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:
         auth: ${{ secrets.GIST_UPDATE }}
-        gistID: 54c92d8df32d9a1b64d945f2e76696f1
-        filename: SwiftDataTCA-coverage.json
+        gistID: b867d408459c766f8b95027edbcfd47d
+        filename: swift-grdb-tca-coverage.json
         label: Coverage
         message: ${{ env.PERCENTAGE }}
         color: success
+        
