@@ -214,6 +214,3 @@ extension SchemaV6 {
     try context.save()
   }
 }
-
-extension SchemaV6.MovieModel: Sendable {}
-extension SchemaV6.ActorModel: Sendable {}

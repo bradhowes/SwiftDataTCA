@@ -7,8 +7,8 @@ enum StageV4 {
     .custom(
       fromVersion: SchemaV3.self,
       toVersion: SchemaV4.self,
-      willMigrate: exportV3(context:),
-      didMigrate: importV4(context:)
+      willMigrate: { try exportV3(context: $0) },
+      didMigrate: { try importV4(context: $0) }
     )
   }
 }

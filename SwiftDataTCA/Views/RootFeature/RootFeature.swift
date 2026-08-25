@@ -7,8 +7,8 @@ import SwiftUI
 struct RootFeature {
 
   // NOTE: declared here but not used. Each tab root view has its own StackState
-  @Reducer(state: .equatable)
-  enum Path {
+  @Reducer
+  enum Path: Sendable {
     case showMovieActors(MovieActorsFeature)
     case showActorMovies(ActorMoviesFeature)
   }
@@ -49,6 +49,8 @@ struct RootFeature {
     }
   }
 }
+
+extension RootFeature.Path.State: Equatable {}
 
 extension RootFeature {
 

@@ -85,6 +85,3 @@ enum SchemaV5: VersionedSchema {
     return fetchDescriptor
   }
 }
-
-extension SchemaV5._Movie: Sendable {}
-extension SchemaV5._Actor: Sendable {}

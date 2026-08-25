@@ -94,6 +94,3 @@ extension SchemaV4 {
     return fetchDescriptor
   }
 }
-
-extension SchemaV4._Movie: Sendable {}
-extension SchemaV4._Actor: Sendable {}

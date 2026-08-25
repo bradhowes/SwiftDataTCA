@@ -26,7 +26,7 @@ extension DependencyValues {
 }
 
 public enum ModelContextKey: DependencyKey {
-  public static let liveValue = liveContext()
+  public static var liveValue: ModelContext { liveContext() }
 }
 
 extension ModelContextKey: TestDependencyKey {
@@ -89,7 +89,6 @@ internal func makeInMemoryContainer() throws -> ModelContainer {
 
 #if hasFeature(RetroactiveAttribute)
 extension KeyPath: @unchecked @retroactive Sendable {}
-extension ModelContext: @unchecked @retroactive Sendable {}
 #else
 extension KeyPath: @unchecked Sendable {}
 extension ModelContext: @unchecked Sendable {}

@@ -6,9 +6,8 @@ enum StageV3 {
     .custom(
       fromVersion: SchemaV2.self,
       toVersion: SchemaV3.self,
-      willMigrate: nil,
-      didMigrate: addSortableTitles(context:)
-    )
+      willMigrate: nil
+    ) { try addSortableTitles(context: $0) }
   }
 }
 

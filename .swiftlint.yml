@@ -32,7 +32,7 @@ opt_in_rules:
   - prefer_zero_over_explicit_init
   - private_swiftui_state
   - redundant_nil_coalescing
-  - redundant_self_in_closure
+  - redundant_self
   - redundant_type_annotation
   - shorthand_optional_binding
   - strict_fileprivate

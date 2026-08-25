@@ -61,5 +61,3 @@ extension SchemaV3 {
     return FetchDescriptor(predicate: searchPredicate(search), sortBy: sortBy)
   }
 }
-
-extension SchemaV3._Movie: Sendable {}

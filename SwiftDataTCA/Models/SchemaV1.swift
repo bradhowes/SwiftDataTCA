@@ -21,5 +21,3 @@ enum SchemaV1: VersionedSchema {
     }
   }
 }
-
-extension SchemaV1._Movie: Sendable {}
